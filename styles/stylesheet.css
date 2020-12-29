@@ -1,3 +1,11 @@
+:root {
+  --primary-magenta: hsl(300, 43%, 22%);
+  --pink: hsl(333, 80%, 67%);
+  --dark-magenta: hsl(303, 10%, 53%);
+  --light-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -11,6 +19,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "heading" "ratings" "testimonials";
+  padding: 20px;
 }
 
 .main__heading_container {
@@ -25,10 +34,26 @@
   grid-area: testimonials;
 }
 
+.heading__title {
+  color: var(--primary-magenta);
+  font: bold 28px "Spartan", sans-serif;
+  text-align: center;
+}
+
+.heading__description {
+  color: var(--dark-magenta);
+  font: 15px "Spartan", sans-serif;
+  text-align: center;
+}
+
 @media only screen and (min-width: 700px) {
   .main_container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "heading ratings" "testimonials testimonials";
+  }
+
+  .heading__title {
+    font-size: 36px;
   }
 }
