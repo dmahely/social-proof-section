@@ -5,3 +5,30 @@
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+.main_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "heading" "ratings" "testimonials";
+}
+
+.main__heading_container {
+  grid-area: heading;
+}
+
+.main__ratings_container {
+  grid-area: ratings;
+}
+
+.main__testimonials_container {
+  grid-area: testimonials;
+}
+
+@media only screen and (min-width: 700px) {
+  .main_container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "heading ratings" "testimonials testimonials";
+  }
+}
