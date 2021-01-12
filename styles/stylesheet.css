@@ -11,14 +11,6 @@ body {
   font: 15px "Spartan", sans-serif;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
 .main_container {
   display: grid;
   grid-template-columns: 1fr;
@@ -123,6 +115,13 @@ body {
 
 .testimonials__description {
   grid-area: desc;
+}
+
+.attribution {
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 /* Smaller screens */
