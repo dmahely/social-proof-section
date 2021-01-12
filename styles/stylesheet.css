@@ -12,6 +12,7 @@ body {
 }
 
 .main_container {
+  margin-top: 100px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -21,6 +22,10 @@ body {
 
 .main__heading_container {
   grid-area: heading;
+  padding-right: 30%;
+  text-align: left;
+  padding: 0 20%;
+  margin-top: 0;
 }
 
 .main__ratings_container {
@@ -34,19 +39,17 @@ body {
 .heading__title {
   color: var(--primary-magenta);
   font-weight: bold;
-  font-size: 28px;
-  text-align: center;
+  font-size: 44px;
+  margin-top: 0;
 }
 
 .heading__description {
   color: var(--dark-magenta);
-  text-align: center;
 }
 
 .ratings__container {
   background-color: var(--light-magenta);
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -58,6 +61,7 @@ body {
 
 .ratings__stars {
   margin: 5px;
+  padding-right: 20px;
 }
 
 .ratings__text {
@@ -124,7 +128,7 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
-/* Smaller screens */
+/* Screens bigger than 700px */
 @media only screen and (min-width: 700px) {
   .main_container {
     grid-template-columns: 1fr 1fr;
@@ -132,29 +136,10 @@ body {
     grid-template-areas: "heading ratings" "testimonials testimonials";
   }
 
-  .heading__title {
-    font-size: 36px;
-  }
-
   .ratings__container {
     flex-direction: row;
   }
 
-  .ratings__first,
-  .ratings__second,
-  .ratings__third {
-    margin-left: 0px;
-  }
-
-  .testimonials__first,
-  .testimonials__second,
-  .testimonials__third {
-    margin-top: 0px;
-  }
-}
-
-/* Bigger screens */
-@media only screen and (min-width: 700px) {
   .ratings__first {
     margin-left: var(--container-margin);
   }
@@ -177,5 +162,25 @@ body {
 
   .testimonials__third {
     margin-top: calc(var(--container-margin) * 3);
+  }
+}
+
+/* Screens smaller than 700px */
+@media only screen and (max-width: 700px) {
+  .ratings__first,
+  .ratings__second,
+  .ratings__third {
+    margin-left: 0px;
+  }
+
+  .testimonials__first,
+  .testimonials__second,
+  .testimonials__third {
+    margin-top: 0px;
+  }
+
+  .main__heading_container {
+    padding-right: 0px;
+    text-align: center;
   }
 }
