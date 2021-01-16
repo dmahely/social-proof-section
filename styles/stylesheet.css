@@ -11,6 +11,16 @@ body {
   font: 15px "Spartan", sans-serif;
 }
 
+.top_pattern {
+  position: absolute;
+  top: 0px;
+}
+
+.top__desktop,
+.top__mobile {
+  display: none;
+}
+
 .main_container {
   margin-top: 100px;
   display: grid;
@@ -130,6 +140,14 @@ body {
 
 /* Screens bigger than 700px */
 @media only screen and (min-width: 700px) {
+  .top__desktop {
+    display: block;
+  }
+
+  .top__mobile {
+    display: none;
+  }
+
   .main_container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -167,6 +185,14 @@ body {
 
 /* Screens smaller than 700px */
 @media only screen and (max-width: 700px) {
+  .top__desktop {
+    display: none;
+  }
+
+  .top__mobile {
+    display: block;
+  }
+
   .ratings__first,
   .ratings__second,
   .ratings__third {
