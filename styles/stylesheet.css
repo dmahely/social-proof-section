@@ -16,6 +16,12 @@ body {
   top: 0px;
 }
 
+.bottom_pattern {
+  position: absolute;
+  top: 170px;
+  right: 0;
+}
+
 .top__desktop,
 .top__mobile {
   display: none;
@@ -28,6 +34,7 @@ body {
   grid-template-rows: 1fr;
   grid-template-areas: "heading" "ratings" "testimonials";
   padding: 20px;
+  grid-gap: 30px;
 }
 
 .main__heading_container {
@@ -40,6 +47,7 @@ body {
 
 .main__ratings_container {
   grid-area: ratings;
+  justify-self: center;
 }
 
 .main__testimonials_container {
@@ -129,6 +137,7 @@ body {
 
 .testimonials__description {
   grid-area: desc;
+  line-height: 1.7;
 }
 
 .attribution {
@@ -140,11 +149,13 @@ body {
 
 /* Screens bigger than 700px */
 @media only screen and (min-width: 700px) {
-  .top__desktop {
+  .top__desktop,
+  .bottom__desktop {
     display: block;
   }
 
-  .top__mobile {
+  .top__mobile,
+  .bottom__mobile {
     display: none;
   }
 
@@ -185,12 +196,23 @@ body {
 
 /* Screens smaller than 700px */
 @media only screen and (max-width: 700px) {
-  .top__desktop {
+  .top__desktop,
+  .bottom__desktop {
     display: none;
   }
 
-  .top__mobile {
+  .bottom_pattern {
+    top: 0;
+    top: 1060px;
+  }
+
+  .top__mobile,
+  .bottom__mobile {
     display: block;
+  }
+
+  .heading__title {
+    font-size: 40px;
   }
 
   .ratings__first,
@@ -205,8 +227,14 @@ body {
     margin-top: 0px;
   }
 
+  .ratings__container {
+    flex-direction: column;
+    min-width: 400px;
+  }
+
   .main__heading_container {
     padding-right: 0px;
+    padding-left: 0px;
     text-align: center;
   }
 }
