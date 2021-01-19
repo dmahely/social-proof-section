@@ -9,17 +9,18 @@
 
 body {
   font: 15px "Spartan", sans-serif;
+  position: relative;
 }
 
 .top_pattern {
   position: absolute;
-  top: 0px;
+  top: -100px;
   z-index: -100;
 }
 
 .bottom_pattern {
   position: absolute;
-  bottom: -170px;
+  bottom: -10px;
   right: 0;
   z-index: -100;
 }
@@ -204,8 +205,18 @@ body {
     text-align: center;
   }
 
+  .top__desktop,
+  .bottom__desktop {
+    display: block;
+  }
+
+  .top__mobile,
+  .bottom__mobile {
+    display: none;
+  }
+
   .ratings_container {
-    min-width: 400px;
+    min-width: 500px;
   }
 }
 
@@ -214,10 +225,6 @@ body {
   .top__desktop,
   .bottom__desktop {
     display: none;
-  }
-
-  .bottom_pattern {
-    bottom: -915px;
   }
 
   .top__mobile,
