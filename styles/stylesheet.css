@@ -14,12 +14,14 @@ body {
 .top_pattern {
   position: absolute;
   top: 0px;
+  z-index: -100;
 }
 
 .bottom_pattern {
   position: absolute;
-  top: 170px;
+  bottom: -170px;
   right: 0;
+  z-index: -100;
 }
 
 .top__desktop,
@@ -147,8 +149,8 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
-/* Screens bigger than 700px */
-@media only screen and (min-width: 700px) {
+/* Screens bigger than 1070px */
+@media only screen and (min-width: 1070px) {
   .top__desktop,
   .bottom__desktop {
     display: block;
@@ -194,6 +196,19 @@ body {
   }
 }
 
+/* Screens between 700px and 1070px */
+@media only screen and (max-width: 1070px) and (min-width: 700px) {
+  .main__heading_container {
+    padding-right: 0px;
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  .ratings_container {
+    min-width: 400px;
+  }
+}
+
 /* Screens smaller than 700px */
 @media only screen and (max-width: 700px) {
   .top__desktop,
@@ -202,8 +217,7 @@ body {
   }
 
   .bottom_pattern {
-    top: 0;
-    top: 1060px;
+    bottom: -915px;
   }
 
   .top__mobile,
@@ -230,11 +244,5 @@ body {
   .ratings__container {
     flex-direction: column;
     min-width: 400px;
-  }
-
-  .main__heading_container {
-    padding-right: 0px;
-    padding-left: 0px;
-    text-align: center;
   }
 }
